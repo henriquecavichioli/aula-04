@@ -15,8 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Run a simple script Hello Word!
-        run: echo Hello, world!
+      - name: Run Linux commands
+        run: |
+          cat README.md
+          echo "Kernel version: $(uname -r)"
+
 
   job-windows:
     runs-on: windows-latest
